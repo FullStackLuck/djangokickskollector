@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Kicks Kollection</h1>
+
+{% for kick in kicks %}
+<a href="/kicks/{{kick.id}}">
+  <div class="card">
+    <div class="card-content black">
+      <span class="card-title">{{ kick.name }}</span>
+    </div>
+</a>
+  </div>
+{% endfor %}
+
+{% endblock %}

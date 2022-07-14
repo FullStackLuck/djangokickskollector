@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Kick Details</h1>
+
+<div class="card">
+  <div class="card-content">
+    <span class="card-title">{{ kick.name }}</span>
+    <p>Brand: {{ kick.brand }}</p>
+    <p>Description: {{ kick.color }}</p>
+    <p>Release: {{ kick.release }}</p>
+  </div>
+  <div class="card-action">
+    <a href="{% url 'kick_update' kick.id %}">Edit</a>
+    <a href="{% url 'kick_delete' kick.id %}">Delete</a>
+  </div>
+</div>
+{% endblock %}
